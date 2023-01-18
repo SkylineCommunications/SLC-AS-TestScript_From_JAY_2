@@ -66,6 +66,6 @@ public class Script
 	/// <param name="engine">Link with SLAutomation process.</param>
 	public void Run(Engine engine)
 	{
-		engine.GenerateInformation("Hello World Script 2!");
+		engine.GenerateInformation("Hello World Script 2! I added some text.");
 	}
 }
