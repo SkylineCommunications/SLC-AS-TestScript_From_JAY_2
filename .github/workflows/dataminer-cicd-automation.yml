@@ -48,7 +48,7 @@ jobs:
           # The API-key generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
           api-key: ${{ secrets.DATAMINER_DEPLOY_KEY_1 }}
           # Id of the uploaded artifact
-          artifact-id: ${{ needs.CI.outputs.artifact-id }}
+          artifact-id: ${{ needs.CI1.outputs.artifact-id }}
           
     CI2:
       uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
@@ -81,6 +81,6 @@ jobs:
             # The API-key generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System. E.g. g597e77412e34297b827c2570a8fa2bc
             api-key: ${{ secrets.DATAMINER_DEPLOY_KEY_2 }}
             # Id of the uploaded artifact
-            artifact-id: ${{ needs.CI.outputs.artifact-id }}
+            artifact-id: ${{ needs.CI2.outputs.artifact-id }}
           
         
