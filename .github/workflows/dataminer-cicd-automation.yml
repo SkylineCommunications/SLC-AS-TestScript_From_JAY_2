@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
-  CI:
+  CI1:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
     with:
       referenceName: ${{ github.ref_name }}
@@ -31,7 +31,7 @@ jobs:
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
     
   # Optional 0 or More CD Jobs as needed
-  CD:    
+  CD1:    
     environment: production
     name: CD1
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
           # Id of the uploaded artifact
           artifact-id: ${{ needs.CI1.outputs.artifact-id }}
           
-    CI:
+    CI2:
       uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
       with:
         referenceName: ${{ github.ref_name }}
@@ -64,7 +64,7 @@ jobs:
         api-key: ${{ secrets.DATAMINER_DEPLOY_KEY_2 }}
         sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
           
-    CD:    
+    CD2:    
       environment: production
       name: CD2
       runs-on: ubuntu-latest
