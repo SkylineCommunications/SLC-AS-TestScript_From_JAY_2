@@ -67,5 +67,7 @@ public class Script
 	public void Run(Engine engine)
 	{
 		engine.GenerateInformation("Hello World Script 2! I added some text.");
+
+		engine.GenerateInformation("This line of code was added by MCS.");
 	}
 }
