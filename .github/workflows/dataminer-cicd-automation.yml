@@ -50,7 +50,7 @@ jobs:
           # Id of the uploaded artifact
           artifact-id: ${{ needs.CI1.outputs.artifact-id }}
           
-    CI2:
+  CI2:
       uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
       with:
         referenceName: ${{ github.ref_name }}
@@ -64,7 +64,7 @@ jobs:
         api-key: ${{ secrets.DATAMINER_DEPLOY_KEY_2 }}
         sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
           
-    CD2:    
+  CD2:    
       environment: production
       name: CD2
       runs-on: ubuntu-latest
