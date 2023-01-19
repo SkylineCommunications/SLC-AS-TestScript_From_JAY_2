@@ -68,6 +68,6 @@ public class Script
 	{
 		engine.GenerateInformation("Hello World Script 2! I added some text.");
 
-		engine.GenerateInformation("This line of code was added by MCS.");
+		engine.GenerateInformation("This line of code was added by MCS. MCS extended this line to trigger a new run through the pipeline.");
 	}
 }
